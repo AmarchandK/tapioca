@@ -33,6 +33,7 @@ abstract class TapiocaBall {
 
 /// Enum that specifies the color filter type.
 enum Filters {
+  transparent,
   pink,
   white,
   blue,
@@ -50,6 +51,9 @@ class _Filter extends TapiocaBall {
   late double degree;
   _Filter(Filters type, double degree) {
     switch (type) {
+      case Filters.transparent:
+        this.color = "#fcfcfc";
+        break;
       case Filters.pink:
         this.color = "#ffc0cb";
         break;
@@ -66,7 +70,7 @@ class _Filter extends TapiocaBall {
         this.color = "#ffd5c0";
         break;
       case Filters.cyan:
-        this.color = "#ffd5c0";
+        this.color = "#c0ffff";
         break;
       case Filters.golden:
         this.color = "#feffc0";
